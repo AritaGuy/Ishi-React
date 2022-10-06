@@ -11,3 +11,60 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#class{
+  margin-top: 95px;
+  position: absolute;
+}
+
+#links{
+  width: 100px;
+  display: display;
+  justify-content: space-between;
+}
+
+.card{
+  width: 300px;
+  height: 300px;
+}
+
+#room-container{
+  display: flex;
+  margin-top: 100px;
+  height: 750px;
+  width: 70%;
+  margin-left: 250px; 
+  background-color: aquamarine;
+}
+
+#selected-room{
+  display: block;
+  margin-top: 100px;
+  height: 650px;
+  width: 50%;
+  margin-left: 350px; 
+  background-color: aquamarine;
+  text-align: center;
+
+}
+
+.rounded-t-5 {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+@media (min-width: 992px) {
+  .rounded-tr-lg-0 {
+    border-top-right-radius: 0;
+  }
+
+  .rounded-bl-lg-5 {
+    border-bottom-left-radius: 0.5rem;
+  }
+}
+
+.login-form{
+  width: 60%;
+  margin-left: 300px;
+  margin-top: 200px;
+}
