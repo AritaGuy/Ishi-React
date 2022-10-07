@@ -8,7 +8,7 @@ function Rooms(){
   const [getRoom, setGetRoom]= useState([])
   const path = useLocation()
 
-   const roomDB = "http://localhost:5000/rooms"
+   const roomDB = "https://ishi-react.herokuapp.com/rooms"
 
   useEffect(()=>{
    fetch(`${roomDB}`)

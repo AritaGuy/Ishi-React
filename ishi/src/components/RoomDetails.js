@@ -3,7 +3,7 @@ import "../index.css"
 import {useParams} from "react-router-dom"
  
 function RoomDetails(){
-  const roomDB = "http://localhost:5000/rooms"
+  const roomDB = "https://ishi-react.herokuapp.com/rooms"
   const [room, setRoom]=useState({})
   const [input, setInput]=useState('')
   let params = useParams()
