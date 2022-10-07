@@ -19,8 +19,8 @@ function RoomDetails(){
   }
   function handleSubmit(e){
     e.preventDefault()
-    fetch(`${roomDB}/id:${params.roomId}`,{
-     method :'POST',
+    fetch(`${roomDB}/${params.roomId}`,{
+     method :'PATCH',
      headers : {
       'Content-Type':'application/JSON'
      },
