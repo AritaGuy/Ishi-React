@@ -5,6 +5,7 @@ import {useParams} from "react-router-dom"
 function RoomDetails(){
   const roomDB = "http://localhost:5000/rooms"
   const [room, setRoom]=useState({})
+  const [input, setInput]=useState('')
   let params = useParams()
   console.log(params)
   useEffect(()=> {
@@ -13,11 +14,31 @@ function RoomDetails(){
   .then((data)=>setRoom(data))}, [])
   
   console.log(room)
+  function handleChange(e){
+    setInput({'paymenttoken':e.target.value})
+  }
+  function handleSubmit(e){
+    e.preventDefault()
+    fetch(`${roomDB}/id:${params.roomId}`,{
+     method :'POST',
+     headers : {
+      'Content-Type':'application/JSON'
+     },
+     body : JSON.stringify({input}) 
+    })
+  }
  return(
     <div id="selected-room">
     <img src={room.image} alt="selected room"/>
     <p id="desc">{room.description}</p>
-    <button type="button" class="btn btn-dark">Book</button>
+    <form onSubmit={handleSubmit}>
+    <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Payment Token</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" onChange={handleChange}/>
+    </div>
+  
+     <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
     </div>
   )
  }
