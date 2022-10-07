@@ -8,7 +8,7 @@ function RoomDetails(){
   let params = useParams()
   console.log(params)
   useEffect(()=> {
-   fetch(`${roomDB}/${params[*]}`)
+   fetch(`${roomDB}/${params.roomId}`)
   .then((r)=>r.json())
   .then((data)=>setRoom(data))}, [])
   
