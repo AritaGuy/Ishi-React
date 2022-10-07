@@ -26,6 +26,7 @@ function RoomDetails(){
      },
      body : JSON.stringify({input}) 
     })
+    alert(`Congratulations you have successfully booked ${room.description}`)
   }
  return(
     <div id="selected-room">
@@ -36,9 +37,8 @@ function RoomDetails(){
     <label for="exampleInputPassword1" class="form-label">Payment Token</label>
     <input type="text" class="form-control" id="exampleInputPassword1" onChange={handleChange}/>
     </div>
-  
      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </form>    
     </div>
   )
  }
