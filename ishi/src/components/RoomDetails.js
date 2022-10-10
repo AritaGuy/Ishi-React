@@ -24,7 +24,7 @@ function RoomDetails(){
      headers : {
       'Content-Type':'application/JSON'
      },
-     body : JSON.stringify({input}) 
+     body : JSON.stringify(input) 
     })
     alert(`Congratulations you have successfully booked ${room.description}`)
   }
