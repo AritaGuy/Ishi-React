@@ -35,7 +35,7 @@ function RoomDetails(){
     <form onSubmit={handleSubmit}>
     <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Payment Token</label>
-    <input type="text" class="form-control" id="exampleInputPassword1" onChange={handleChange}/>
+    <input type="text" class="form-control" id="InputPassword1" onChange={handleChange}/>
     </div>
      <button type="submit" class="btn btn-primary">Submit</button>
     </form>    

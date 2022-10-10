@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from "react";
-import {Routes, Route, useLocation } from "react-router-dom";
+// import {Routes, Route, useLocation } from "react-router-dom";
 import '../index.css';
-import RoomDetails from "./RoomDetails"
+// import RoomDetails from "./RoomDetails"
 import RoomList from "./roomList"
 
 function Rooms(){
   const [getRoom, setGetRoom]= useState([])
-  const path = useLocation()
+
 
    const roomDB = "https://ishi-react.herokuapp.com/rooms"
 
@@ -17,15 +17,7 @@ function Rooms(){
     setGetRoom(rooms)
    })
   }, [])
-  console.log(getRoom)
-
- 
-  function handleClick(hostel){
-    //console.log(hostel)
-    //specific = hostel
-    // console.log(specific)
-    
-  }
+  
   
  return (
   <div>

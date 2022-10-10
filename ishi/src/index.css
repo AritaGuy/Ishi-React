@@ -88,3 +88,8 @@ code {
   margin-left: 300px;
   margin-top: 200px;
 }
+
+#InputPassword1{
+  width: 30%;
+  margin-left: 450px;
+}

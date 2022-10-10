@@ -1,16 +1,16 @@
 import React from "react";
-import { NavLink, Link, useLocation, Routes, Route } from "react-router-dom";
+import {  Link, useLocation, Routes, Route } from "react-router-dom";
 import "../index.css";
-import RoomDetails from "./RoomDetails";
+// import RoomDetails from "./RoomDetails";
 
 function RoomList({rooms}){
-   let path = useLocation()
-    let idArray = rooms.map((a)=>a.id)
-    function handleClick(hostel){
-      const render = <Link to={`${path}/${hostel.id}`}>specific room</Link>
-      console.log(path)
-      return(render)
-    }
+  //  let path = useLocation()
+    // let idArray = rooms.map((a)=>a.id)
+    // function handleClick(hostel){
+    //   const render = <Link to={`${path}/${hostel.id}`}>specific room</Link>
+    //   console.log(path)
+    //   return(render)
+    // }
     console.log(rooms)
     return(<div id="parent">
     <div id ="class" className="position-absolute top-0 start-50 translate-middle"><h1>Looking for rooms??</h1></div>
